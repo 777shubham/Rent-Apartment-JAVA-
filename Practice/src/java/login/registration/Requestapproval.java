@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "ApproveRequest", urlPatterns = {"/ApproveRequest"})
-public class ApproveRequest extends HttpServlet {
+public class Requestapproval extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)

@@ -1,5 +1,7 @@
 package login.registration;
 
+import login.registration.*;
+
 public class RegisterBean {
   String name;
   String email;

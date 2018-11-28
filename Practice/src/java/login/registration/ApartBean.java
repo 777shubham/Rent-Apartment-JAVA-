@@ -1,10 +1,11 @@
 package login.registration;
 
+import login.registration.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-public class AppartMentBean {
+public class ApartBean {
  String RoomId="0";
  String Email;
  String Address;

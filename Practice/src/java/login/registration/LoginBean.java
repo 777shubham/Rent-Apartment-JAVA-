@@ -1,5 +1,7 @@
 package login.registration;
 
+
+/**/
 public class LoginBean {
 private String Email;
 private String Password;

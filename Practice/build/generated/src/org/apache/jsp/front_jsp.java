@@ -200,10 +200,30 @@ public final class front_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("     \n");
       out.write("        <br>\n");
       out.write("        <div postion=\"fixed\" class=\"navbar\">\n");
+      out.write("            <b>");
+ if (session.getAttribute("Email") == null)
+            {
+            response.sendRedirect("Login.jsp");
+            }
+
+      out.write("\n");
+      out.write("            </b>\n");
+      out.write("             <span style=\"float:right;color: white;margin: 0px 10px 0px 0px;\"><a href=\"logout.jsp\">LOGOUT</a> </span> \n");
       out.write("            <span style=\"float:right;color: white;margin: 15px 10px 0px 0px;\">Welcome ");
       out.print(session.getAttribute("Email"));
       out.write("</span>\n");
-      out.write("            <div style=\"float:right;\"><a href=\"logout.jsp\">LOGOUT</a> </div> \n");
+      out.write("             \n");
+      out.write("           \n");
+      out.write("      <font color=\"White\">\n");
+      out.write("          <strong>\n");
+      out.write("         <span style=\"float:right;color: white;margin: 15px 10px 0px 0px;\" id=\"date\"></span>\n");
+      out.write("        </strong>           \n");
+      out.write("      </font>\n");
+      out.write("            <font color=\"White\">\n");
+      out.write("          <strong>\n");
+      out.write("         <span style=\"float:right;color: white;margin: 15px 10px 0px 0px;\" id=\"time\"></span>\n");
+      out.write("        </strong>           \n");
+      out.write("      </font>\n");
       out.write("            \n");
       out.write("\n");
       out.write("                <a href=\"front.jsp\">HOME</a>\n");
@@ -229,7 +249,7 @@ public final class front_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("       <div>\n");
       out.write("                \n");
-      out.write("          <align=\"right\"><form action=\"SearchForAparts\" method=\"post\">\n");
+      out.write("          <align=\"right\"><form action=\"ApartmentSearch\" method=\"post\">\n");
       out.write("        <select name=\"ste\" onchange=\"this.form.submit()\">\n");
       out.write("          <option value=\"haryana\" onselect=\"Submit\" >HARYANA</option>\n");
       out.write("        <option value=\"himachal\" onclick=\"Submit\">HIMACHAL</option>\n");
@@ -260,7 +280,7 @@ public final class front_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("             \n");
       out.write("            \n");
       out.write("   <h1 style=\"color:Crimson;font-family:crimson\n");
-      out.write("            ;font-size:50;text-align:center;\"<b>APARTMENT-GURU</b></h1>\n");
+      out.write("            ;font-size:50;text-align:center; text-shadow:1px 1px 2px black,0 0 25px blue,0 0 5px darkblue;\"<b>APARTMENT-GURU</b></h1>\n");
       out.write("\n");
       out.write("\n");
       out.write("    <center>\n");
@@ -330,7 +350,7 @@ public final class front_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("            \n");
       out.write("            <div>\n");
-      out.write("                <h3 align=\"center\">EXPERIENCE TRUE CONVENIENCE IN APARTMENT LIVING </h3>\n");
+      out.write("                <h3 align=\"center\" style=\"text-shadow:1px 1px 2px black,0 0 25px blue,0 0 5px cyan;\">EXPERIENCE TRUE CONVENIENCE IN APARTMENT LIVING </h3>\n");
       out.write("          <video width=\"500\" height=\"300\" controls=\"autoplay\">\n");
       out.write("            <source src=\"video1.mp4\" type=\"video/mp4\">\n");
       out.write("          </video>\n");
@@ -343,7 +363,11 @@ public final class front_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <source src=\"video3.mp4\" type=\"video/mp4\">\n");
       out.write("          </video> \n");
       out.write("            </div>\n");
-      out.write("\n");
+      out.write("            <script>\n");
+      out.write("                var today = new Date();\n");
+      out.write(" document.getElementById('time').innerHTML=today.toLocaleTimeString();\n");
+      out.write("              var today = new Date();\n");
+      out.write(" document.getElementById('date').innerHTML=today.toLocaleDateString();</script>\n");
       out.write("\n");
       out.write("            <br>\n");
       out.write("            <br><br>\n");

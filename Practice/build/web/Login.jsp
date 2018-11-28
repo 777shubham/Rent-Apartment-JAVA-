@@ -56,12 +56,12 @@ img.avatar {
 
   <label for="email"><b>Enter Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
-    <br>
-    <br>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-    <br>
-    <br>
+   <br>
+   <br>
+   <label for="psw"><b>Password</b></label>
+   <input type="password" placeholder="Enter Password" name="password" required>
+   <br>
+   <br>
 <!--    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>-->
     <button type="submit" class="registerbtn">LOGIN</button>
     <div class="container signin">

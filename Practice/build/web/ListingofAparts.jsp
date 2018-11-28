@@ -1,4 +1,6 @@
 <%@page import="login.registration.ListingBean"%>
+
+<%--<%@page import="login.registration.ListingBean"%>--%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -97,7 +99,7 @@
         <nav class="navbar navbar-inverse">
   <div class="container-fluid" >
     <div class="navbar-nav mr-auto">
-        <a class="navbar-brand" href="front.jsp"><h5 style="font-color:white;">HOME</h5></a>
+        <a class="navbar-brand" href="front.jsp"><h5 style="font-color:white;">BACK TO HOME</h5></a>
     </div>
   </div>
 </nav>
@@ -106,7 +108,7 @@
 <!--       <div class="column">-->
     <div class="content"  style = "background-color:whitesmoke;">
             <h3 color="magenta "align="center" style = "background-color:#FBF6D9;  border-style: dotted;
-          border-color: black;">ORDERS:</h3>
+          border-color: black; text-shadow:2px 2px Blue;">CHOICES</h3>
           
        
        <%  if(!ar.isEmpty()){
@@ -114,14 +116,13 @@
       { %>
       <div style="height:250px;" id="lol">
        <a href=<%= ar.get(i).getImgLink()%> target="_blank">
-           <img src=<%= ar.get(i).getImgLink()%> width="250" height="250" style="float:left;margin:0 20px 20px 0; border-style:ridge;
-    border-color: black;
-    border-width: 7px;"> </a>
+           <img src=<%= ar.get(i).getImgLink()%> width="250" height="250" style="float:left;margin:0 20px 20px 20px; border:solid; border-radius:50px 50px 50px 50px; border-color:black;"> </a>
       <p style="color:#6C2DC7;">Email :<%= ar.get(i).getUserEmail()%></p>
       <p style="color:#6C2DC7;">State :<%= ar.get(i).getState()%></p>
         <p style="color:#6C2DC7;">Address :<%= ar.get(i).getAddress()%></p>
       <p style="color:#6C2DC7;">Bedrooms :<%= ar.get(i).getBedrooms()%></p>
-      <form method="post" action="BuyingRequest" onsubmit="funct()">
+      <form method="post" action="Requestbuy" onsubmit="funct()">
+<form action="" method="post" onsubmit="funct()">
       <input type="hidden" name="APD" value=<%=ar.get(i).getApId()%> >
       <input type="hidden" name="AP20" value=<%= ar.get(i).getUserEmail()%> >
       <button type="submit" class="btn btn-success">Request Apartment</button>

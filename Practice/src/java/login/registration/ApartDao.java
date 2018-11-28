@@ -1,18 +1,19 @@
 package login.registration;
 
+import login.registration.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.sql.*;
 
-public class ApartmentDao {
-      public boolean addApp(AppartMentBean A)
+public class ApartDao {
+      public boolean addApp(ApartBean A)
       {
-          String RoomId10=A.getRoomId();
-          String Address10=A.getAddress();
+          String RoomId=A.getRoomId();
+          String Address=A.getAddress();
           String state=A.getState();
-          String bedrooms10 =A.getBedrooms();
-          String Email10=A.getEmail();
+          String bedrooms =A.getBedrooms();
+          String Email=A.getEmail();
           InputStream img = A.getImage();
           try
           {
@@ -28,19 +29,19 @@ public class ApartmentDao {
               rs.next();
               Blob b = rs.getBlob(1);
               byte[] by = b.getBytes(1, (int)b.length());
-              String js ="H:\\Javaclasses\\Practice\\web\\"+RoomId10+".jpg";
-              String tryy=RoomId10+".jpg";
+              String js ="H:\\Javaclasses\\Practice\\web\\"+RoomId+".jpg";
+              String tryy=RoomId+".jpg";
                FileOutputStream fout = new FileOutputStream(js);
               fout.write(by);
               fout.close();
               String query4="truncate table image";
               PreparedStatement psmt5 = conn.prepareStatement(query4);
               int s=psmt5.executeUpdate();
-              psmt.setString(1, RoomId10);
-              psmt.setString(2, Email10);
+              psmt.setString(1, RoomId);
+              psmt.setString(2, Email);
               psmt.setString(4, state);
-              psmt.setString(3, Address10);
-              psmt.setString(5, bedrooms10);
+              psmt.setString(3, Address);
+              psmt.setString(5, bedrooms);
               psmt.setString(6, tryy);
               psmt.setString(7, "No Requests");
               psmt.setString(8, "Request Pending");

@@ -6,8 +6,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletResponse;
-import login.registration.RegisterBean;
-import login.registration.RegisterDao;
 
 @WebServlet(urlPatterns = {"/InfoAdd"})
 public class InfoAdd extends HttpServlet {

@@ -12,7 +12,8 @@ import javax.servlet.http.HttpSession;
 
 
 @WebServlet(urlPatterns = {"/LoginServlet"})
-public class LoginServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet
+{
    @Override
    public void service (HttpServletRequest req,HttpServletResponse res) throws ServletException, IOException
    {
@@ -28,7 +29,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session=req.getSession(true);
             session.setAttribute("Email",Email);
             session.setMaxInactiveInterval(3000);
-  res.sendRedirect("front.jsp");
+            res.sendRedirect("front.jsp");
         }
         else
         {

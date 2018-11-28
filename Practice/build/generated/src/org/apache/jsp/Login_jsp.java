@@ -95,12 +95,12 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("  <label for=\"email\"><b>Enter Email</b></label>\n");
       out.write("    <input type=\"text\" placeholder=\"Enter Email\" name=\"email\" required>\n");
-      out.write("    <br>\n");
-      out.write("    <br>\n");
-      out.write("    <label for=\"psw\"><b>Password</b></label>\n");
-      out.write("    <input type=\"password\" placeholder=\"Enter Password\" name=\"password\" required>\n");
-      out.write("    <br>\n");
-      out.write("    <br>\n");
+      out.write("   <br>\n");
+      out.write("   <br>\n");
+      out.write("   <label for=\"psw\"><b>Password</b></label>\n");
+      out.write("   <input type=\"password\" placeholder=\"Enter Password\" name=\"password\" required>\n");
+      out.write("   <br>\n");
+      out.write("   <br>\n");
       out.write("<!--    <p>By creating an account you agree to our <a href=\"#\">Terms & Privacy</a>.</p>-->\n");
       out.write("    <button type=\"submit\" class=\"registerbtn\">LOGIN</button>\n");
       out.write("    <div class=\"container signin\">\n");

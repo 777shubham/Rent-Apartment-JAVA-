@@ -1,5 +1,7 @@
 package login.registration;
 
+import login.registration.LoginBean;
+import login.registration.*;
 import java.sql.*;
 public class loginDao {
   public boolean getLogIn(LoginBean LG)

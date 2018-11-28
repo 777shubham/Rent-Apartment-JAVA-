@@ -1,5 +1,6 @@
 package login.registration;
 
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -33,14 +34,14 @@ public class AppartmentMain extends HttpServlet {
             System.out.println(filePart.getContentType());
             inputStream = filePart.getInputStream();
         }
-        AppartMentBean Ap = new AppartMentBean();
+        ApartBean Ap = new ApartBean();
         Ap.setRoomId(Roomid);
         Ap.setBedrooms(Bedroom);
         Ap.setState(state);
         Ap.setAddress(Address);
         Ap.setEmail(Email1);
         Ap.setImage(inputStream);
-        ApartmentDao Aa= new ApartmentDao();
+        ApartDao Aa= new ApartDao();
         if(Aa.addApp(Ap))
         {
          req.getRequestDispatcher("/front.jsp").include(req, res);

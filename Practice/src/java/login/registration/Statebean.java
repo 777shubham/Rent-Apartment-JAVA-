@@ -5,9 +5,6 @@
  */
 package login.registration;
 
-import modal.*;
-import login.registration.*;
-
 /**
  *
  * @author Shubham Mishra

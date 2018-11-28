@@ -161,8 +161,26 @@ div.fixed {
      
         <br>
         <div postion="fixed" class="navbar">
+            <b><% if (session.getAttribute("Email") == null)
+            {
+            response.sendRedirect("Login.jsp");
+            }
+%>
+            </b>
+             <span style="float:right;color: white;margin: 0px 10px 0px 0px;"><a href="logout.jsp">LOGOUT</a> </span> 
             <span style="float:right;color: white;margin: 15px 10px 0px 0px;">Welcome <%=session.getAttribute("Email")%></span>
-            <div style="float:right;"><a href="logout.jsp">LOGOUT</a> </div> 
+             
+           
+      <font color="White">
+          <strong>
+         <span style="float:right;color: white;margin: 15px 10px 0px 0px;" id="date"></span>
+        </strong>           
+      </font>
+            <font color="White">
+          <strong>
+         <span style="float:right;color: white;margin: 15px 10px 0px 0px;" id="time"></span>
+        </strong>           
+      </font>
             
 
                 <a href="front.jsp">HOME</a>
@@ -188,7 +206,7 @@ div.fixed {
             </div>
        <div>
                 
-          <align="right"><form action="SearchForAparts" method="post">
+          <align="right"><form action="ApartmentSearch" method="post">
         <select name="ste" onchange="this.form.submit()">
           <option value="haryana" onselect="Submit" >HARYANA</option>
         <option value="himachal" onclick="Submit">HIMACHAL</option>
@@ -219,7 +237,7 @@ div.fixed {
              
             
    <h1 style="color:Crimson;font-family:crimson
-            ;font-size:50;text-align:center;"<b>APARTMENT-GURU</b></h1>
+            ;font-size:50;text-align:center; text-shadow:1px 1px 2px black,0 0 25px blue,0 0 5px darkblue;"<b>APARTMENT-GURU</b></h1>
 
 
     <center>
@@ -289,7 +307,7 @@ div.fixed {
             </div>
             
             <div>
-                <h3 align="center">EXPERIENCE TRUE CONVENIENCE IN APARTMENT LIVING </h3>
+                <h3 align="center" style="text-shadow:1px 1px 2px black,0 0 25px blue,0 0 5px cyan;">EXPERIENCE TRUE CONVENIENCE IN APARTMENT LIVING </h3>
           <video width="500" height="300" controls="autoplay">
             <source src="video1.mp4" type="video/mp4">
           </video>
@@ -302,7 +320,11 @@ div.fixed {
             <source src="video3.mp4" type="video/mp4">
           </video> 
             </div>
-
+            <script>
+                var today = new Date();
+ document.getElementById('time').innerHTML=today.toLocaleTimeString();
+              var today = new Date();
+ document.getElementById('date').innerHTML=today.toLocaleDateString();</script>
 
             <br>
             <br><br>

@@ -22,7 +22,7 @@ public class CancelRequest extends HttpServlet {
            Connection N = DBConnection.getConnection();
           String Idd0=request.getParameter("APD");
           System.out.println(Idd0);
-          String query19="update Appdata set RequestedBy=(?),Requestdetail=(?) where AppId=(?)" ;
+          String query19="update Appdata set request=(?),request_status=(?) where roomid=(?)" ;
           PreparedStatement st22 = N.prepareStatement(query19);
           String ab="No Requests";
           String ab11="Request pending";
@@ -32,8 +32,11 @@ public class CancelRequest extends HttpServlet {
           int i = st22.executeUpdate();
           if(i!=0)
           {
-              request.getRequestDispatcher("/ListOforderz").include(request, response);
-            
+              request.getRequestDispatcher("/ListOforderz").include(request, response);  
+          }
+          else
+          {
+              reponse.sendRedirect("/Login.jsp");
           }
         }
         catch(IOException | ClassNotFoundException | SQLException e){
