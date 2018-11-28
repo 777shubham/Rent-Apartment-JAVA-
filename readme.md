@@ -8,9 +8,15 @@ RENT APARTMENT WEB APPLICATION
   <br>
 3>Features:
   i.Login form with html validation done
+  <br>
   ii.Signup form with validation done.
+   <br>
   iii.Upload apartments option done.
+   <br>
   iv. Searching apartments using states name done.
+   <br>
   v. Now user succesfully book an apartment done.
+   <br>
   vi. User can withdraw his/her request by cancel request option done.
+   <br>
   vii. Logout session is completed.
