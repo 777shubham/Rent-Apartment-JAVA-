@@ -9,7 +9,7 @@ RENT APARTMENT WEB APPLICATION
   <br>
 3>Features:
      <br>
-      &nbspi.Login form with html validation done
+      &nbpsi.Login form with html validation done
       <br>
       ii.Signup form with validation done.
        <br>
